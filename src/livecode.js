@@ -27,6 +27,8 @@ export function getNested (obj, path, def = undefined) {
  * Given two arrays, each containing list of colors, where the first ones are the ones to be guessed
  * and the second ones the guesses, return an array with two numbers, first representing correctly guessed position
  * as well as color, and the second correctly guessed color but not position
+ * Assumption: each color can only appear once
+ * Bonus: what if color can appear multiple times?
  * @param {string[]} toGuess e.g. ['red', 'blue', 'green']
  * @param {string[]} guesses e.g. ['red', 'yellow', 'green']
  * @return {number[]} guessed correct position and value, only guessed correct value, e.g. [2, 0]
