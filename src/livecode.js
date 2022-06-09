@@ -10,7 +10,7 @@ export function getNested (obj, path, def = undefined) {
     // loop through the pathElements and access object
     obj = obj[pathElement]
     // if not - return undefined
-    if (!obj) return def;
+    if (obj === undefined) return def;
   }
   return obj;
 }

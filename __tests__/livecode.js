@@ -5,17 +5,17 @@ describe('Tests', () => {
   const obj = {
     a: {
       b: {
-        c: 'hello'
+        c: false
       }
     }
   };
 
   test('nested object should return existing value based on path', () => {
-    expect(getNested(obj, 'a.b.c')).toEqual('hello');
+    expect(getNested(obj, 'a.b.c')).toEqual(false);
   });
 
   test('nested object should return existing value', () => {
-    expect(getNested(obj, 'a.b')).toStrictEqual({c: 'hello'});
+    expect(getNested(obj, 'a.b')).toStrictEqual({c: false});
   });
 
   test('nested object should return undefined if value not found', () => {
