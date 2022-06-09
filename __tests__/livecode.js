@@ -34,6 +34,12 @@ describe('Tests', () => {
       const guesses = ['magenta', 'cyan', 'purple'];
       expect(playMastermind(toGuess, guesses)).toStrictEqual([1, 2]);
     });
+
+    test('should return correctly when multiple colors', () => {
+      const toGuess = ['blue', 'blue', 'red'];
+      const guesses = ['red', 'red', 'green'];
+      expect(playMastermind(toGuess, guesses)).toStrictEqual([0, 1]);
+    });
   });
 
 });

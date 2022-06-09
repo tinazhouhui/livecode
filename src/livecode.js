@@ -37,6 +37,7 @@ export function playMastermind (toGuess, guesses) {
       numberOfColors--;
     }
   }
+
   // what is left in toGuess includes any of the left guesses
   for (const color of guesses) {
     if (toGuess.includes(color)) {
