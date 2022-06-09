@@ -2,7 +2,8 @@ import {describe, test, expect} from '@jest/globals';
 import {getNested, playMastermind} from '../src/livecode.js';
 
 describe('Tests', () => {
-  const obj = {
+  describe('nested object', () => {
+    const obj = {
     a: {
       b: {
         c: false
@@ -21,6 +22,7 @@ describe('Tests', () => {
   test('nested object should return undefined if value not found', () => {
     expect(getNested(obj, 'a.b.d', '123')).toBe('123');
   });
+  })
 
   describe('PlayMastermind', () => {
     test('should return correctly when guessed both position and color', () => {
